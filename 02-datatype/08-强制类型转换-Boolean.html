@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>强制类型转换-Boolean</title>
+    <script type="text/javascript">
+        /* 
+            将其他的数据类型转换为Boolean
+                使用Boolean()函数
+                1. 将数字转换为布尔值
+                - 除了0和NaN，其余的都是true
+                2. 将字符串转换为布尔值
+                - 除了空字符串，其余的都是true
+                3. null和undefined都会转换为false
+                4. 对象也会转换为true
+        */
+
+        // 数字类型
+        var a = 123;
+        console.log(typeof a);
+        console.log(a);
+
+        // 调用Boolean()函数将a转化为布尔值
+        a = Boolean(a);
+        console.log(typeof a);
+        console.log(a); // true
+
+        a = -123;
+        console.log(typeof a);
+        console.log(a); 
+
+        a = Boolean(a);
+        console.log(typeof a);
+        console.log(a); // true
+
+        a = 0;
+        console.log(typeof a);
+        console.log(a); 
+
+        a = Boolean(a);
+        console.log(typeof a);
+        console.log(a); // false
+
+        a = Infinity;
+        console.log(typeof a);
+        console.log(a);
+
+        a = Boolean(a);
+        console.log(typeof a);
+        console.log(a); // true
+
+        a = NaN;
+        console.log(typeof a);
+        console.log(a);
+
+        a = Boolean(a);
+        console.log(typeof a);
+        console.log(a); // false
+
+        // 字符串类型
+        a = "hello";
+        console.log(typeof a);
+        console.log(a);
+
+        a = Boolean(a);
+        console.log(typeof a);
+        console.log(a); // true
+
+        a = "";
+        console.log(typeof a);
+        console.log(a);
+
+        a = Boolean(a);
+        console.log(typeof a);
+        console.log(a); // false
+
+        // object类型
+        a = null;
+        console.log(typeof a);
+        console.log(a);
+
+        a = Boolean(a);
+        console.log(typeof a);
+        console.log(a); // false
+
+        a = undefined;
+        console.log(typeof a);
+        console.log(a);
+
+        a = Boolean(a);
+        console.log(typeof a);
+        console.log(a); // false
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
