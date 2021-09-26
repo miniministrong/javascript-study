@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for循环练习2</title>
+    <script type="text/javascript">
+        /* 
+            打印1-100之间所有7的倍数的个数以及总和
+        */
+
+        var count= 0;
+        var sum = 0;
+        for(var i = 1; i <= 100; i++){
+            if(i % 7 == 0){
+                count++;
+                sum += i;
+            }
+        }
+        alert("count = " + count);
+        alert("sum = " + sum);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
