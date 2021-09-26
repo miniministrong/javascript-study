@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for循环练习4</title>
+    <script type="text/javascript">
+        /* 
+            在页面中接受一个用户输入的数字，并判断该数是否为质数。
+            质数：只能被1和他本身整除的数，1不是质数也不是合数，质数必须是大于1的自然数
+        */
+        var num = prompt("请输入一个大于1的整数");
+        if(num <= 1 || isNaN(num)){
+                alert("输入数字不合法");
+        }else{
+            var flag = true;
+            for(var i = 2; i < num; i++){
+                if(num % i == 0){
+                    flag = false;
+                }
+            }
+
+            if(flag){
+                alert(num + "是质数");
+            }else{
+                alert("这个不是质数");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

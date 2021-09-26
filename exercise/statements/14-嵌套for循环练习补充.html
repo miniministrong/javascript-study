@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>嵌套for循环练习补充</title>
+		<script type="text/javascript">
+			/* 
+				打印出1-100之间的所有质数
+			*/
+		   // 测试如下的程序的性能
+		   // 在程序执行前，开启计时器
+		   // console.time()可以用来开启一个计时器
+		   // 他需要一个字符串作为参数，这个字符串将会作为计时器的标识
+		   console.time("abc");
+		   
+			// 打印1-100之间的所有质数
+			for(var i = 2; i <= 100000; i++){
+				var flag = true;
+				for(var j = 2; j <= Math.sqrt(i); j++){
+					if(i % j == 0){
+						flag = false;
+						// break;
+					}
+				}
+				if(flag){
+					// document.write(i + "<br />");
+					console.log(i);
+				}
+			}
+			
+			// 终止计时器
+			console.timeEnd("abc");
+			
+			// 可以通过Math.sqrt()对一个数进行开方
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
