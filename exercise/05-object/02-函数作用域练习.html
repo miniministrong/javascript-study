@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>函数作用域练习</title>
+		<script type="text/javascript">
+			/**
+			 * 说出以下代码的执行结果
+			 */
+			
+			// 1
+			/* var a = 123;
+			function fun(){
+				alert(a);
+			}
+			fun(); */
+			// 123
+			
+			// 2
+			/* var a = 123;
+			function fun(){
+				alert(a);
+				var a = 456;
+			}
+			fun();
+			alert(a); */
+			// undefined 123
+			
+			// 3
+			/* var a = 123;
+			function fun(){
+				alert(a);
+				a = 456;
+			}
+			fun();
+			alert(a); */
+			// 123 456
+			
+			// 4
+			/* var a = 123;
+			function fun(a){
+				alert(a);
+				a = 456;
+			}
+			fun();
+			alert(a); */
+			// undefined 123
+			
+			// 5
+			/* var a = 123;
+			function fun(a){
+				alert(a);
+				a = 456;
+			}
+			fun(123);
+			alert(a); */
+			// 123 123
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
