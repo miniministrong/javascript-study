@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数组的测试练习题</title>
+		<script type="text/javascript">
+			/**
+			 * 定义一个Person类，类中包含name、age两个属性，
+			 * 并修改该类原型中的toString()方法，使其可以输出对象的具体信息。
+			 * 信息格式如下，：Person[name=孙悟空,age=18]
+			 */
+			function Person(name, age){
+				this.name = name;
+				this.age = age;
+			}
+			Person.prototype.toString = function(name, age){
+				return "Person[name=" + this.name + ",age=" + this.age + "]"
+			}
+			
+			/**
+			 * 创建一个数组，向数组中添加三个Person对象。
+			 */
+			var zhangsan = new Person("张三", 18);
+			var lisi = new Person("李四", 20);
+			var wangwu = new Person("王五", 36);
+			var personArray = [zhangsan, lisi, wangwu];
+			
+			/**
+			 * 遍历创建的数组
+			 */
+			personArray.forEach(function(value, index, personArray){
+				console.log(value);
+			});
+			
+			/**
+			 * 列举向数组最前和最后添加和删除的四个方法
+			 */
+			// 最前添加
+			personArray.unshift(new Person("赵六", 19));
+			console.log("最前添加 = " + personArray.toString());
+			// 最前删除
+			personArray.shift();
+			console.log("最前删除 = " + personArray.toString());
+			// 最后添加
+			personArray.push(new Person("赵六", 19));
+			console.log("最后添加 = " + personArray.toString());
+			// 最后删除
+			personArray.pop();
+			console.log("最后删除 = " + personArray.toString());
+			
+			/**
+			 * 编写一段程序，去除下列数组中重复的元素
+			 * var arr = [1, 2, 3, 3, 4, 5, 2, 2, 2, 6, 7]
+			 */
+			var arr = [1, 2, 3, 3, 4, 5, 2, 2, 2, 6, 7];
+			// 遍历数组
+			for (var i = 0; i < arr.length; i++) {
+				// 遍历出当前元素之后的所有元素
+				for (var j = i + 1; j < arr.length; j++) {
+					// 判断当前元素和之后的其中一个元素值是否相等
+					// 如果相等则去除该元素
+					if(arr[i] == arr[j]){
+						arr.splice(j, 1);
+						j--;
+					}
+				}
+			}
+			console.log(arr.toString());
+			
+			/**
+			 * 写出下列代码的输出值
+			 */
+			function A(){}
+			function B(a){this.a = a;}
+			function C(a){if(a){this.a = a;}}
+			A.prototype.a = 1;
+			B.prototype.a = 1;
+			C.prototype.a = 1;
+			console.log(new A());
+			console.log(new B());
+			console.log(new C());
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
