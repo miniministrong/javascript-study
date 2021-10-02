@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#outer{
+    width: 640px;
+    margin: 50px auto;
+    background-color: greenyellow;
+    padding: 10px;
+    /*设置文本的居中*/
+    text-align: center;
+}
+
+img{
+    width: 640px;
+    height: 348px;
+}
